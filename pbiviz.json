@@ -1,0 +1,26 @@
+{
+    "visual": {
+        "name": "d3plot",
+        "displayName": "D3plot",
+        "guid": "d3plotEDA30AAEABB94CBE8E0FF698606A2CA1",
+        "visualClassName": "Visual",
+        "version": "1.0.0.0",
+        "description": "scatterplot",
+        "supportUrl": "support@url.com",
+        "gitHubUrl": "user@github.com"
+    },
+    "apiVersion": "5.3.0",
+    "author": {
+        "name": "author",
+        "email": "author@email.com"
+    },
+    "assets": {
+        "icon": "assets/icon.png"
+    },
+    "externalJS": [],
+    "style": "style/visual.less",
+    "capabilities": "capabilities.json",
+    "dependencies": null,
+    "stringResources": [],
+    "version": "1.0.0.0"
+}
