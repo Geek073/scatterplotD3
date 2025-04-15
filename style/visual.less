@@ -1,0 +1,60 @@
+.scatterPlotVisual {
+    .container {
+        .x-axis,
+        .y-axis {
+            path {
+                stroke: #666;
+                stroke-width: 1px;
+            }
+            
+            line {
+                stroke: #666;
+                stroke-width: 1px;
+            }
+            
+            text {
+                fill: #666;
+                font-size: 11px;
+            }
+        }
+        
+        .x-grid,
+        .y-grid {
+            line {
+                stroke: #ddd;
+                stroke-width: 1px;
+                shape-rendering: crispEdges;
+            }
+            
+            path {
+                stroke-width: 0;
+            }
+        }
+        
+        .x-axis-label,
+        .y-axis-label {
+            fill: #666;
+            font-weight: bold;
+        }
+        
+        .dataPoint {
+            cursor: pointer;
+            
+            &:hover {
+                stroke: #333;
+                stroke-width: 2px;
+            }
+        }
+    }
+    
+    .chart-title {
+        fill: #333;
+    }
+}
+
+.tooltip {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
