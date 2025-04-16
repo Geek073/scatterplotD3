@@ -37,24 +37,28 @@
       }
     ],
     "dataViewMappings": [
-    {
-      "categorical": {
-        "categories": {
-          "for": { "in": "category" }
-        },
-        "values": {
-          "select": [
-            { "for": { "in": "xAxis" } },
-            { "for": { "in": "yAxis" } },
-            { "for": { "in": "zAxis" } },
-            { "for": { "in": "color" } },
-            { "for": { "in": "size" } },
-            { "for": { "in": "tooltip" } }
-          ]
-        }
+  {
+    "categorical": {
+      "categories": {
+        "select": [
+          { "for": { "in": "category" } }
+        ],
+        "dataReductionAlgorithm": { "top": {} }
+      },
+      "values": {
+        "select": [
+          { "for": { "in": "xAxis" } },
+          { "for": { "in": "yAxis" } },
+          { "for": { "in": "zAxis" } },
+          { "for": { "in": "color" } },
+          { "for": { "in": "size" } },
+          { "for": { "in": "tooltip" } }
+        ]
       }
     }
-  ],
+  }
+]
+,
     "objects": {
       "dataPoint": {
         "displayName": "Data Points",
