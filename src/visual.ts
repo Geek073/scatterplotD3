@@ -81,6 +81,25 @@ export class Visual implements powerbi.extensibility.visual.IVisual {
             });
         }
 
+        // TEMP: Show counts for debugging
+        this.svg.append("text")
+            .attr("x", 20)
+            .attr("y", 15)
+            .text(`X: ${xValues.length}, Y: ${yValues.length}, Z: ${zValues.length}, C: ${colorValues.length}, IDX: ${indexValues.length}, CAT: ${categories.length}`)
+            .style("font-size", "12px")
+            .style("fill", "gray");
+
+        // TEMP: Warn if no data points
+        if (dataPoints.length === 0) {
+            this.svg.append("text")
+                .attr("x", 20)
+                .attr("y", 30)
+                .text("⚠️ No data points available!")
+                .style("fill", "red")
+                .style("font-size", "16px");
+            return;
+        }
+
         // Sorting to maintain rendering consistency like built-in visuals
         dataPoints.sort((a, b) => a.index - b.index);
 
@@ -103,7 +122,7 @@ export class Visual implements powerbi.extensibility.visual.IVisual {
             .attr("r", 5)
             .attr("fill", d => d.color)
             .append("title")
-            .text(d => `${d.category} [${d.index}]\nX: ${d.x}, Y: ${d.y}, Z: ${d.z}`);
+            .text(d => `category: ${d.category}\nindex: ${d.index}\nx: ${d.x}\ny: ${d.y}\nz: ${d.z}\ncolor: ${d.color}`);
     }
 
     public enumerateObjectInstances(options: powerbi.EnumerateVisualObjectInstancesOptions): VisualObjectInstance[] {
